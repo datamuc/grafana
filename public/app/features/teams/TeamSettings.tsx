@@ -80,7 +80,7 @@ export const TeamSettings = ({ team, updateTeam }: Props) => {
               description="This is optional and is primarily used to set the team profile avatar (via gravatar service)."
               disabled={!canWriteTeamSettings}
             >
-              <Input {...register('email')} placeholder="team@email.com" type="email" id="email-input" />
+              <Input {...register('email')} placeholder="team@example.com" type="email" id="email-input" />
             </Field>
             <Button type="submit" disabled={!canWriteTeamSettings}>
               Update

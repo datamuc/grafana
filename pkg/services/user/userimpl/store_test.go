@@ -34,35 +34,35 @@ func TestIntegrationUserGet(t *testing.T) {
 			name:            "user not found non exact - not case insensitive",
 			wantErr:         user.ErrUserNotFound,
 			searchLogin:     "Test",
-			searchEmail:     "Test@email.com",
+			searchEmail:     "Test@example.com",
 			caseInsensitive: false,
 		},
 		{
 			name:            "user found exact - not case insensitive",
 			wantErr:         nil,
 			searchLogin:     "test",
-			searchEmail:     "test@email.com",
+			searchEmail:     "test@example.com",
 			caseInsensitive: false,
 		},
 		{
 			name:            "user found non exact - case insensitive",
 			wantErr:         nil,
 			searchLogin:     "Test",
-			searchEmail:     "Test@email.com",
+			searchEmail:     "Test@example.com",
 			caseInsensitive: true,
 		},
 		{
 			name:            "user found exact - case insensitive",
 			wantErr:         nil,
 			searchLogin:     "Test",
-			searchEmail:     "Test@email.com",
+			searchEmail:     "Test@example.com",
 			caseInsensitive: true,
 		},
 		{
 			name:            "user not found - case insensitive",
 			wantErr:         user.ErrUserNotFound,
 			searchLogin:     "Test_login",
-			searchEmail:     "Test*@email.com",
+			searchEmail:     "Test*@example.com",
 			caseInsensitive: true,
 		},
 	}
@@ -77,7 +77,7 @@ func TestIntegrationUserGet(t *testing.T) {
 
 	_, errUser := userStore.Insert(context.Background(),
 		&user.User{
-			Email:   "test@email.com",
+			Email:   "test@example.com",
 			Name:    "test",
 			Login:   "test",
 			Created: time.Now(),
@@ -130,7 +130,7 @@ func TestIntegrationUserDataAccess(t *testing.T) {
 	t.Run("user not found", func(t *testing.T) {
 		_, err := userStore.Get(context.Background(),
 			&user.User{
-				Email: "test@email.com",
+				Email: "test@example.com",
 				Name:  "test1",
 				Login: "test1",
 			},
@@ -141,7 +141,7 @@ func TestIntegrationUserDataAccess(t *testing.T) {
 	t.Run("insert user", func(t *testing.T) {
 		_, err := userStore.Insert(context.Background(),
 			&user.User{
-				Email:   "test@email.com",
+				Email:   "test@example.com",
 				Name:    "test1",
 				Login:   "test1",
 				Created: time.Now(),
@@ -154,7 +154,7 @@ func TestIntegrationUserDataAccess(t *testing.T) {
 	t.Run("get user", func(t *testing.T) {
 		_, err := userStore.Get(context.Background(),
 			&user.User{
-				Email: "test@email.com",
+				Email: "test@example.com",
 				Name:  "test1",
 				Login: "test1",
 			},

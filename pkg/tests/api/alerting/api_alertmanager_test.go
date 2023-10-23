@@ -88,7 +88,7 @@ func TestIntegrationAMConfigAccess(t *testing.T) {
 						"type": "email",
 						"isDefault": true,
 						"settings": {
-							"addresses": "<example@email.com>"
+							"addresses": "<example@example.com>"
 						}
 					}]
 				}]
@@ -159,7 +159,7 @@ func TestIntegrationAMConfigAccess(t *testing.T) {
 						"type": "email",
 						"secureFields": {},
 						"settings": {
-							"addresses": "<example@email.com>"
+							"addresses": "<example@example.com>"
 						}
 					}]
 				}]
@@ -1889,7 +1889,7 @@ func TestIntegrationAlertmanagerStatus(t *testing.T) {
 				"type": "email",
 				"disableResolveMessage": false,
 				"settings": {
-					"addresses": "\u003cexample@email.com\u003e"
+					"addresses": "\u003cexample@example.com\u003e"
 				},
 				"secureSettings": null
 			}]

@@ -414,7 +414,7 @@ var configWithMuteTimings = `
 				"type": "email",
 				"isDefault": true,
 				"settings": {
-					"addresses": "<example@email.com>"
+					"addresses": "<example@example.com>"
 				}
 			}]
 		}]
@@ -452,7 +452,7 @@ var configWithMuteTimingsInRoute = `
 				"type": "email",
 				"isDefault": true,
 				"settings": {
-					"addresses": "<example@email.com>"
+					"addresses": "<example@example.com>"
 				}
 			}]
 		}]

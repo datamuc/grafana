@@ -701,7 +701,7 @@ var validConfig = `{
 				"type": "email",
 				"isDefault": true,
 				"settings": {
-					"addresses": "<example@email.com>"
+					"addresses": "<example@example.com"
 				}
 			}]
 		}]
@@ -725,7 +725,7 @@ var validConfigWithSecureSetting = `{
 				"type": "email",
 				"isDefault": true,
 				"settings": {
-					"addresses": "<example@email.com>"
+					"addresses": "<example@example.com"
 				}
 			}]},
 			{

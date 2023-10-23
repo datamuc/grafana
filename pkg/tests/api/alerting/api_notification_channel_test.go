@@ -107,7 +107,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 					"type": "email",
 					"disableResolveMessage": false,
 					"settings": {
-						"addresses":"example@email.com",
+						"addresses":"example@example.com",
 						"singleEmail": true
 					},
 					"secureFields": {}
@@ -156,7 +156,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 		require.JSONEq(t, expectedJSON, string(b))
 
 		require.Len(t, mockEmails.emails, 1)
-		require.Equal(t, []string{"example@email.com"}, mockEmails.emails[0].To)
+		require.Equal(t, []string{"example@example.com"}, mockEmails.emails[0].To)
 	})
 
 	t.Run("assert working receiver with new secure settings returns OK", func(t *testing.T) {
@@ -451,7 +451,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 					"type": "email",
 					"disableResolveMessage": false,
 					"settings": {
-						"addresses":"example@email.com"
+						"addresses":"example@example.com"
 					},
 					"secureFields": {}
 				}
@@ -550,7 +550,7 @@ func TestIntegrationTestReceivers(t *testing.T) {
 					"type": "email",
 					"disableResolveMessage": false,
 					"settings": {
-						"addresses":"example@email.com"
+						"addresses":"example@example.com"
 					},
 					"secureFields": {}
 				}
@@ -663,7 +663,7 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 					"type":"email",
 					"disableResolveMessage":false,
 					"settings":{
-						"addresses":"example@email.com"
+						"addresses":"example@example.com"
 					},
 					"secureFields":{}
 				}
@@ -713,7 +713,7 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 		require.JSONEq(t, expectedJSON, string(b))
 
 		require.Len(t, mockEmails.emails, 1)
-		require.Equal(t, []string{"example@email.com"}, mockEmails.emails[0].To)
+		require.Equal(t, []string{"example@example.com"}, mockEmails.emails[0].To)
 	})
 
 	t.Run("assert custom annotations can replace default annotations", func(t *testing.T) {
@@ -753,7 +753,7 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 					"type":"email",
 					"disableResolveMessage":false,
 					"settings":{
-						"addresses":"example@email.com"
+						"addresses":"example@example.com"
 					},
 					"secureFields":{}
 				}
@@ -801,7 +801,7 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 		require.JSONEq(t, expectedJSON, string(b))
 
 		require.Len(t, mockEmails.emails, 1)
-		require.Equal(t, []string{"example@email.com"}, mockEmails.emails[0].To)
+		require.Equal(t, []string{"example@example.com"}, mockEmails.emails[0].To)
 	})
 
 	t.Run("assert custom labels can replace default label", func(t *testing.T) {
@@ -840,7 +840,7 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 					"type":"email",
 					"disableResolveMessage":false,
 					"settings":{
-						"addresses":"example@email.com"
+						"addresses":"example@example.com"
 					},
 					"secureFields":{}
 				}
@@ -888,7 +888,7 @@ func TestIntegrationTestReceiversAlertCustomization(t *testing.T) {
 		require.JSONEq(t, expectedJSON, string(b))
 
 		require.Len(t, mockEmails.emails, 1)
-		require.Equal(t, []string{"example@email.com"}, mockEmails.emails[0].To)
+		require.Equal(t, []string{"example@example.com"}, mockEmails.emails[0].To)
 	})
 }
 
@@ -1618,7 +1618,7 @@ const alertmanagerConfig = `
             "name": "email_test",
             "type": "email",
             "settings": {
-              "addresses": "test@email.com",
+              "addresses": "test@example.com",
               "singleEmail": true
             }
           }
@@ -2138,7 +2138,7 @@ var expAlertmanagerConfigFromAPI = `
             "type": "email",
             "disableResolveMessage": false,
             "settings": {
-              "addresses": "test@email.com",
+              "addresses": "test@example.com",
               "singleEmail": true
             },
             "secureFields": {}
@@ -2483,7 +2483,7 @@ var expAlertmanagerConfigFromAPI = `
 var expEmailNotifications = []*notifications.SendEmailCommandSync{
 	{
 		SendEmailCommand: notifications.SendEmailCommand{
-			To:          []string{"test@email.com"},
+			To:          []string{"test@example.com"},
 			SingleEmail: true,
 			Template:    "ng_alert_notification",
 			Subject:     "[FIRING:1] EmailAlert (default)",

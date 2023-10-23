@@ -41,7 +41,7 @@ const defaultAlertmanagerConfigJSON = `
 				"type": "email",
 				"disableResolveMessage": false,
 				"settings": {
-					"addresses": "\u003cexample@email.com\u003e"
+					"addresses": "\u003cexample@example.com\u003e"
 				},
 				"secureFields": {}
 			}]

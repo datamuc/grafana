@@ -445,7 +445,7 @@ func Test_ConfigUnmashaling(t *testing.T) {
 						  "type": "email",
 						  "disableResolveMessage": false,
 						  "settings": {
-							"addresses": "<example@email.com>"
+							"addresses": "<example@example.com>"
 						  },
 						  "secureFields": {}
 						}
@@ -502,7 +502,7 @@ func Test_ConfigUnmashaling(t *testing.T) {
 						  "type": "email",
 						  "disableResolveMessage": false,
 						  "settings": {
-							"addresses": "<example@email.com>"
+							"addresses": "<example@example.com>"
 						  },
 						  "secureFields": {}
 						}
@@ -547,7 +547,7 @@ func Test_ConfigUnmashaling(t *testing.T) {
 						  "type": "email",
 						  "disableResolveMessage": false,
 						  "settings": {
-							"addresses": "<example@email.com>"
+							"addresses": "<example@example.com>"
 						  },
 						  "secureFields": {}
 						}
@@ -606,7 +606,7 @@ func Test_ConfigUnmashaling(t *testing.T) {
 						  "type": "email",
 						  "disableResolveMessage": false,
 						  "settings": {
-							"addresses": "<example@email.com>"
+							"addresses": "<example@example.com>"
 						  },
 						  "secureFields": {}
 						}
@@ -664,7 +664,7 @@ func Test_ConfigUnmashaling(t *testing.T) {
 						  "type": "email",
 						  "disableResolveMessage": false,
 						  "settings": {
-							"addresses": "<example@email.com>"
+							"addresses": "<example@example.com>"
 						  },
 						  "secureFields": {}
 						}
